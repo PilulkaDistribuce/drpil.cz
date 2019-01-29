@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  php:
+    image: krizius/pilulka-php-apache
+    volumes:
+      - .:/var/www/html
+    environment:
+      XDEBUG_CONFIG: 'remote_enable=0'
+    ports:
+      - 3333:80
+
