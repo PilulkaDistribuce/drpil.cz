@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "DrPil\\": "src/"
+    }
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.5"
+  }
+}
