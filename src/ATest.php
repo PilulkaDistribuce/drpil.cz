@@ -8,11 +8,23 @@ use PHPUnit\Framework\TestCase;
 class ATest extends TestCase
 {
 
-    public function testReverseUppercase()
+    /**
+     * @param string $input
+     * @param string $expected
+     * @dataProvider aValues
+     */
+    public function testReverseUppercase(string $input, string $expected)
     {
-        $a = new A();
-        $input = 'Martin';
-        $this->assertEquals('NITRAM', $a->reverseUppercase());
+        $a = new A(new B($input));
+        $this->assertEquals($expected, $a->reverseUppercase());
+    }
+
+    public function aValues(): array
+    {
+        return [
+            ['Martin', 'NITRAM'],
+            ['Pucan', 'NACUP'],
+        ];
     }
 
 }

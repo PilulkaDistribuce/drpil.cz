@@ -6,10 +6,23 @@ namespace DrPil;
 
 class B
 {
+    /**
+     * @var string
+     */
+    private $value;
 
-    public function lowercase(string $input): string
+
+    /**
+     * B constructor.
+     */
+    public function __construct(string $value)
     {
-        return mb_strtolower($input);
+        $this->value = $value;
+    }
+
+    public function lowercase(): string
+    {
+        return mb_strtolower($this->value);
     }
 
 }

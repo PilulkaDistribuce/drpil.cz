@@ -10,8 +10,8 @@ class BTest extends TestCase
 
     public function testLowercase()
     {
-        $b = new B();
         $input = "Martin";
+        $b = new B($input);
         $this->assertEquals("martin", $b->lowercase($input));
     }
 
