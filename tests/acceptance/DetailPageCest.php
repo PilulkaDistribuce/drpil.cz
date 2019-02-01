@@ -9,5 +9,8 @@ class DetailPageCest
     // tests
     public function tryToTest(AcceptanceTester $I)
     {
+        $I->amOnPage('/u/1234');
+        $I->seeResponseCodeIs(200);
+        $I->see('1234');
     }
 }

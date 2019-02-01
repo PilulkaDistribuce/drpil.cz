@@ -5,6 +5,12 @@
     }
   },
   "require-dev": {
-    "codeception/codeception": "^2.5"
+    "codeception/codeception": "^2.5",
+    "symfony/var-dumper": "^4.2"
+  },
+  "require": {
+    "league/route": "^4.2",
+    "zendframework/zend-diactoros": "^2.1",
+    "zendframework/zend-httphandlerrunner": "^1.0"
   }
 }
